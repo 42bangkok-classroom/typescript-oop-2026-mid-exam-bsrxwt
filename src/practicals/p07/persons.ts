@@ -1,10 +1,15 @@
 interface Person {
   firstName?: string;
   lastName?: string;
-  age?: number;
+  age: number ;
 }
+function sortPersons(persons: Person[]): Person[] {
 
-function sortPersons(persons: Person[]): Person[] {}
+  return [...persons].filter((per)=> per.age>0&&per.age<100).filter((pers)=> pers.firstName !== ''&& pers.firstName)
+  .sort((a,b)=> a.age - b.age)
+  .map(({firstName,lastName,age})=>({firstName,lastName,age}));
+  
+}
 
 
 const persons: Person[] = [
@@ -16,3 +21,4 @@ const persons: Person[] = [
   { firstName: "Jane", lastName: "Smith", age: -5 },
   { lastName: "NoName", age: 40 }
 ];
+console.log(sortPersons(persons));
