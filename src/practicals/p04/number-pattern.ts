@@ -10,7 +10,7 @@ for(let row = nums;row>=1;row--){
         {
             result += " ";
         }
-    for(let co = nums-row+1;co>0;co--){
+    for(let co = nums-row;co>0;co--){
         result += co;
     }
     console.log(result);
