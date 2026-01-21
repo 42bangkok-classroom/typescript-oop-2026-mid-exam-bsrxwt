@@ -13,6 +13,6 @@ if(points>=0&&points<=49){
     console.log("Grade is C");
 }else if(points>=70&&points<=79){
     console.log("Grade is B");
-}else if(points>=70&&points<=79){
+}else if(points>=80&&points<=100){
     console.log("Grade is A");
 }
